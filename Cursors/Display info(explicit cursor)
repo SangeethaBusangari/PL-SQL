@@ -1,0 +1,13 @@
+declare
+  cursor sail_cur is select * from sailors
+  s2 sailors%rowtype;
+  begin
+    open sail-sur
+    loop
+      fetch sail-cur into s2;
+    exit when sail-sur %not found;
+    dbms_output.put_line(s2.sid||s2.name||s2.rating);
+    end loop;
+    close sail-cur;
+  end;
+  /
