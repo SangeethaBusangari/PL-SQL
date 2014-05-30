@@ -1,0 +1,12 @@
+create or replace
+procedure simple is
+begin
+  dbms_output.put_line('welcome to pl/sql procedures');
+end;
+/
+
+output: 
+procedure created
+> call simple();
+welcome to PL?SQL procedure
+call completed
