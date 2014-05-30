@@ -1,0 +1,14 @@
+create or replace
+procedure square(n in out number(10))is
+begin
+  n:=n*n;
+end;
+/
+>declare
+a number(10)
+begin
+  a:=&a;
+  square(a);
+  dbms_output.put_line('The Square is'||a);
+end;
+/
