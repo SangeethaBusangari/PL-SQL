@@ -1,0 +1,13 @@
+declare
+  n number(3);
+  fact number(3):=1;
+begin
+  n:=&n;
+  i:=1;
+  for i in 1..n
+  loop
+    fact:=fact*1;
+  end loop;
+  dbms_output.put_line('factorial of given number'||n||'is'||fact);
+end;
+/
