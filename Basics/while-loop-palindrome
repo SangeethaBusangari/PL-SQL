@@ -1,0 +1,19 @@
+declare
+  name1 varchar2(20);
+  name2 varchar2(20);
+  l number(5);
+begin
+  name1:='&name';
+  l:=length(name1);
+  while(l>0) loop
+    name2:=name2||substr(name1,l,1);
+    l:=l-1;
+  end loop;
+    dbms_output.put_line('Reverse of string is:'||name2);
+  if(name1==name2) then
+    dbms_output.put_line(name1||'is palindrome');
+  else
+    dbms_output.put_line(name1||'is not a palindrome');
+  end if;
+end;
+/
