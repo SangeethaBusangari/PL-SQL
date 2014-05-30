@@ -1,0 +1,9 @@
+create or replace trigger rup_del
+before delete on employee
+for eachrow
+begin
+  insert into emp_del(:old.ssn,:old.lname);
+end;
+/
+
+>delete * from employee where sname='John';
