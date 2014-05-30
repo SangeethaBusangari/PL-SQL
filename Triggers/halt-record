@@ -1,0 +1,10 @@
+create or replace trigger stud_roll before insert on student
+for eachrow
+begin
+  if:new.rno>60 then
+    raise_application_error(-20,005,'student rollno is above 60 not allowed');
+  end if;
+end;
+/
+
+>insert into student values(4,'sangeetha',500);
