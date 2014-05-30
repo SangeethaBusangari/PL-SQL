@@ -1,0 +1,19 @@
+declare
+cursor emp-cur is
+select * from employee
+order by salary desc;
+e employee%rowtype;
+i number;
+begin
+  n:=1;
+  open emp-cur;
+  loop
+    i:=i+1;
+  exit when i=3;
+  fetch emp-cur into e
+  end loop;
+  dbms_output.put_line('name'||e.name);
+  close emp-cur;
+end;
+/
+  
