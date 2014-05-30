@@ -1,0 +1,12 @@
+declare
+num number;
+res number;
+begin
+  num:=number;
+  res:=sqrt(num);
+  dbms_output.put_line('The result is'||res);
+  exception
+    when value-error then
+    dbms_output.put_line('Invalid data type');
+end;
+/
