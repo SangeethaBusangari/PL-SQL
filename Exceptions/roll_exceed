@@ -1,0 +1,16 @@
+declare
+rollno number;
+name varchar2(15);
+roll_exceed exception;
+begin
+  rollno:=&rollno;
+  name:=&name;
+    if rollno > 60 then
+       raise roll_exceed;
+    end if;
+      insert into student1 values(rollno,name);
+    exception
+      when roll_exceed then
+    dbms_output.put_line('roll number is exceeding');
+end;
+/
