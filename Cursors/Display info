@@ -1,0 +1,10 @@
+declare
+  pname1 product.pname%type;
+  price1 product.price%type;
+begin
+  select pname.price into pname1,price1
+  from product
+  where pid=101;
+  dbms_output.put_line('product'||pname1||'price'||price1);
+end;
+/
