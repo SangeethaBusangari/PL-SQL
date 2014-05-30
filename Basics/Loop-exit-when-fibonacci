@@ -1,0 +1,22 @@
+declare 
+num number(1);
+f1 number(1):=0;
+f2 number(1):=1;
+f3 number(1);
+i number(2);
+begin
+  num:=&num;
+  dbms_output.put_line(f1);
+  dbms_output.put_line(f2);
+  loop
+    f3:=f1+f2;
+    dbms_output.put_line(f3);
+    f1:=f2;
+    f2:=f3;
+    exit when (i<=num);
+    i:=i+1;
+  end loop;
+end;
+/
+  
+  
