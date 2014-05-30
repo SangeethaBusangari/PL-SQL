@@ -1,0 +1,6 @@
+create or replace
+procedure Hi(name varchar)is
+begin
+  dbms_output.put_line('Hai'||name);
+end;
+>call Hi('sangeetha');
