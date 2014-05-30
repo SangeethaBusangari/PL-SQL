@@ -1,0 +1,19 @@
+declare
+  num number(5);
+  rem number(5);
+  sum number(5):=0;
+  num1 number(5);
+begin
+  num:=&num;
+  num1:=num;
+  loop
+    rem:=mod(num,10);
+    sum:=sum+rem;
+    num:=trunc(num/10);
+  if(num=0) then
+  exit;
+  endif;
+  endloop;
+  dbms_output.put_line("sum of digits of num'||num||'is'||sum);
+end;
+/
