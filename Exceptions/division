@@ -1,0 +1,14 @@
+declare
+num1 number;
+num2 number;
+res number;
+begin
+  num1:=&num1;
+  num2:=&num2;
+  res:=num1/num2;
+  dbms_output.put_line('The result is'||res);
+  exception
+    when zero_divide then
+      dbms_output.put_line('divide by zero');
+end;
+/
