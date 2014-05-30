@@ -1,0 +1,18 @@
+declare
+  cursor inc_cur is
+  select * from employee
+  e1 employee%rowtype;
+begin
+  open inc-cur;
+  loop
+    fetch inc-cur into e1;
+    exit when inc-cur%not found;
+    if e1.sex='M' then
+      update employee set salary=salary+1000 where ssn=e1.ssn;
+    else
+      update employee set salary=salary+500 where ssn=e1.ssn;
+    end if;
+    end loop;
+  close inc-cur;
+end;
+/
